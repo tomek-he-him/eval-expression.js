@@ -1,0 +1,16 @@
+{ "name": "eval-expression"
+, "version": "0.0.1"
+, "description": "Eval an expression and get what you expect."
+, "license": "MIT"
+
+, "contributors":
+  [ { "name": "Tomek Wiszniewski"
+    , "email": "t.wiszniewski@gmail.com"
+    }
+  ]
+
+, "repository":
+  { "type": "git"
+  , "url": "https://github.com/tomekwi/js-eval-expression.git"
+  }
+}
