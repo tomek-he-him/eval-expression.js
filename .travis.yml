@@ -1,0 +1,13 @@
+language: node_js
+node_js:
+- '0.10'
+
+deploy:
+  provider: npm
+  email: t.wiszniewski@gmail.com
+  api_key:
+    secure: QTimkMMLwmiqtQAz/hV+DQQsSG0OQFA9vTAtFFPnlnvP6ISQhR6EGA0CQkASa7ZdV13YCz+YlHurb4XFI2wk1W2+dpIiPaRinH52M6n0bppFFrkCKcdpr8vFaTlNFdSrleNIUW3Yxdx5qNohR/A32q71VEwq4H3crdFoMursnJY=
+  on:
+    tags: true
+    all_branches: true
+    repo: tomekwi/eval-expression.js
