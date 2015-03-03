@@ -11,7 +11,7 @@ eval-expression
 
 **Be warned:** Take [all precausions which apply to using `eval`][eval-precautions]. `eval-expression` is no safer, no more performant and no easier to debug.
 
-But it is more predictable. And, just as eval, it sometimes is useful for rapid prototyping.
+But it is more predictable. And, just as `eval`, it sometimes is useful for rapid prototyping.
 
 
 [eval-precautions]: http://www.nczonline.net/blog/2013/06/25/eval-isnt-evil-just-misunderstood/
