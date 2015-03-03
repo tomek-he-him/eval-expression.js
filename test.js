@@ -133,3 +133,29 @@ test("Works with compound expressions", function (is) {
 
   is.end();
   });
+
+
+test("Throws", function (is) {
+  is.plan(4);
+
+  try {
+    evalExpression("var anything = true");
+    }
+  catch (error) {
+    is.ok(error instanceof SyntaxError
+      , "a SyntaxError"
+      );
+    is.pass("when called with a var statement");
+    }
+
+  try {
+    evalExpression("=& just gibberish #!");
+    }
+  catch (error) {
+    is.ok(error instanceof SyntaxError
+      , "a SyntaxError"
+      );
+    is.pass("when called with a nonsense string");
+    }
+
+  });
