@@ -1,4 +1,5 @@
 [![Build status](https://img.shields.io/travis/tomekwi/eval-expression.js/master.svg?style=flat-square)](https://travis-ci.org/tomekwi/eval-expression.js)
+ [![Coveralls](https://img.shields.io/coveralls/tomekwi/eval-expression.js.svg?style=flat-square)](https://coveralls.io/r/tomekwi/eval-expression.js)
  [![David DM](https://img.shields.io/david/tomekwi/eval-expression.js.svg?style=flat-square)](http://david-dm.org/tomekwi/eval-expression.js)
 
 
