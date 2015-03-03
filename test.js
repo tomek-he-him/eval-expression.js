@@ -136,16 +136,15 @@ test("Works with compound expressions", function (is) {
 
 
 test("Throws", function (is) {
-  is.plan(4);
+  is.plan(3);
 
   try {
     evalExpression("var anything = true");
     }
   catch (error) {
     is.ok(error instanceof SyntaxError
-      , "a SyntaxError"
+      , "a SyntaxError when called with a var statement"
       );
-    is.pass("when called with a var statement");
     }
 
   try {
@@ -153,9 +152,17 @@ test("Throws", function (is) {
     }
   catch (error) {
     is.ok(error instanceof SyntaxError
-      , "a SyntaxError"
+      , "a SyntaxError when called with a nonsense string"
       );
-    is.pass("when called with a nonsense string");
+    }
+
+  try {
+    evalExpression("");
+    }
+  catch (error) {
+    is.ok(error instanceof SyntaxError
+      , "a SyntaxError to an empty expression"
+      );
     }
 
   });
