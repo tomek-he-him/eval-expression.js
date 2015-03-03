@@ -5,10 +5,13 @@
 
 , "scripts":
   { "test": "node test.js | tap-spec"
+  , "coveralls": "istanbul cover test.js --report lcovonly && coveralls < ./coverage/lcov.info"
   }
 
 , "devDependencies":
-  { "tap-spec": "2.2.2"
+  { "coveralls": "2.11.2"
+  , "istanbul": "0.3.6"
+  , "tap-spec": "2.2.2"
 
   , "tape-catch": "1.0.4"
   }
