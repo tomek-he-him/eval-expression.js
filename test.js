@@ -55,8 +55,8 @@ test("Works with various data types", function (is) {
     );
 
   is.deepEqual
-    ( evalExpression('[1, true, , "something"]')
-    , [1, true, , "something"]
+    ( evalExpression('[1, true, null, "something"]')
+    , [1, true, null, "something"]
     , "array literals"
     );
 
