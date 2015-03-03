@@ -3,10 +3,12 @@ eval-expression
 
 **Evaluate an expression and get what you expect.**
 
-**Be warned:** Take [all precausions which apply to using `eval`][]. `eval-expression` is no safer, no more performant and no easier to debug. It's just more predictable.
+**Be warned:** Take [all precausions which apply to using `eval`][eval-precautions]. `eval-expression` is no safer, no more performant and no easier to debug.
+
+But it is more predictable. And, just as eval, it sometimes is useful for rapid prototyping.
 
 
-[all precausions which apply to using `eval`]: http://www.nczonline.net/blog/2013/06/25/eval-isnt-evil-just-misunderstood/
+[eval-precautions]: http://www.nczonline.net/blog/2013/06/25/eval-isnt-evil-just-misunderstood/
 
 
 
@@ -26,25 +28,34 @@ Usage
 -----
 
 ```js
-var evalExpression = require('eval-expression');
+var evalExpression = require("eval-expression");
 
 
-var sayHello = evalExpression("function () { console.log('Hello!'); }");
+// `eval` fails with function expressions – `evalExpression` handles them.
+var sayHello = evalExpression('function () {console.log("Hello!");}');
 sayHello();  // Logs: Hello!
 
+// `eval` fails with object literals – `evalExpression` does what you expect.
+var fruit = evalExpression('{sort: "pear"}');
+fruit;  // Outputs: {sort: "pear"}
 
-var fruit = evalExpression("{sort: 'pear'}");
-fruit;  // Outputs: {sort: 'pear'}
+
+// You can access variables in the current scope.
+console.log(evalExpression("fruit"));  // Outputs: {sort: "pear"}
 
 
-// evalExpression is only intended to evaluate single expressions.
-var good;
+// `evalExpression` is only intended to evaluate expressions, not other
+// statements.
+var tasty;
+
 // So don't do this:
-evalExpression("if (fruit.sort == 'pear') { good = true }");  // Throws an error
+evalExpression('if (fruit.sort == "pear") {tasty = true}');  // Throws
+
 // Do this instead:
-good = evalExpression("fruit.sort == 'pear' ? true : false");  // Outputs: true
+tasty = evalExpression('fruit.sort == "pear" ? true : false');  // Outputs: true
+
 // …or even:
-good = evalExpression("fruit.sort == 'pear'");  // Outputs: true
+tasty = evalExpression('fruit.sort == "pear"');  // Outputs: true
 ```
 
 
@@ -54,6 +65,7 @@ API
 ---
 
 ### evalExpression(expression)
+
 #### expression
 > Type: `String`  
 > Required
