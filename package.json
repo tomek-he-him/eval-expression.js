@@ -3,6 +3,16 @@
 , "description": "Evaluate an expression and get what you expect."
 , "license": "MIT"
 
+, "scripts":
+  { "test": "node test.js | tap-spec"
+  }
+
+, "dependencies":
+  { "tap-spec": "2.2.2"
+
+  , "tape-catch": "1.0.4"
+  }
+
 , "keywords":
   [ "eval"
   , "code"
@@ -11,13 +21,11 @@
   , "return"
   , "value"
   ]
-
 , "contributors":
   [ { "name": "Tomek Wiszniewski"
     , "email": "t.wiszniewski@gmail.com"
     }
   ]
-
 , "repository":
   { "type": "git"
   , "url": "git@github.com:tomekwi/eval-expression.js.git"
