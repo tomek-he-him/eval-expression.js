@@ -19,6 +19,12 @@ test("Works with various data types", function (is) {
     );
 
   is.equal
+    ( evalExpression("true")
+    , true
+    , "booleans"
+    );
+
+  is.equal
     ( evalExpression("54")
     , 54
     , "integer numbers"
@@ -70,6 +76,59 @@ test("Works with various data types", function (is) {
     ( evalExpression('new Date("2015-01-01")')
     , new Date("2015-01-01")
     , "constructed objects"
+    );
+
+  is.deepEqual
+    ( evalExpression("/test/")
+    , /test/
+    , "regular expression literals"
+    );
+
+  is.end();
+  });
+
+
+test("Works with compound expressions", function (is) {
+  is.equal
+    ( evalExpression('true ? "ok" : "not ok"')
+    , true ? "ok" : "not ok"
+    , "the ternary operator"
+    );
+
+  is.equal
+    ( evalExpression("true && 100")
+    , true && 100
+    , "logical operators"
+    );
+
+  is.equal
+    ( evalExpression("5 + 5")
+    , 5 + 5
+    , "mathematical operators"
+    );
+
+  is.equal
+    ( evalExpression('"a" + "b"')
+    , "a" + "b"
+    , "string operators"
+    );
+
+  is.deepEqual
+    ( evalExpression('"a.b.c".split(".")')
+    , "a.b.c".split(".")
+    , "string operators"
+    );
+
+  is.equal
+    ( evalExpression("[1, 2, 3].join()")
+    , [1, 2, 3].join()
+    , "array functions"
+    );
+
+  is.equal
+    ( evalExpression('/fine/.test("refine")')
+    , /fine/.test("refine")
+    , "regex functions"
     );
 
   is.end();
