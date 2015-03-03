@@ -3,6 +3,15 @@
 , "description": "Evaluate an expression and get what you expect."
 , "license": "MIT"
 
+, "keywords":
+  [ "eval"
+  , "code"
+  , "execute"
+  , "evaluate"
+  , "return"
+  , "value"
+  ]
+
 , "contributors":
   [ { "name": "Tomek Wiszniewski"
     , "email": "t.wiszniewski@gmail.com"
@@ -11,6 +20,6 @@
 
 , "repository":
   { "type": "git"
-  , "url": "https://github.com/tomekwi/js-eval-expression.git"
+  , "url": "git@github.com:tomekwi/eval-expression.js.git"
   }
 }
