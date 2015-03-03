@@ -1,7 +1,7 @@
 eval-expression
 ===============
 
-**Eval an expression and get what you expect.**
+**Evaluate an expression and get what you expect.**
 
 **Be warned:** Take [all precausions which apply to using `eval`][]. `eval-expression` is no safer, no more performant and no easier to debug. It's just more predictable.
 

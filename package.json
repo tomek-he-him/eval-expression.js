@@ -1,6 +1,6 @@
 { "name": "eval-expression"
 , "version": "0.1.1"
-, "description": "Eval an expression and get what you expect."
+, "description": "Evaluate an expression and get what you expect."
 , "license": "MIT"
 
 , "contributors":
