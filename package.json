@@ -1,5 +1,5 @@
 { "name": "eval-expression"
-, "version": "1.0.0"
+, "version": "1.0.1"
 , "description": "Evaluate an expression and get what you expect."
 , "license": "MIT"
 
