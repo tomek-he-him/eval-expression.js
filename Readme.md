@@ -1,3 +1,9 @@
+[![Build status](https://img.shields.io/travis/tomekwi/eval-expression.js/master.svg?style=flat-square)](https://travis-ci.org/tomekwi/eval-expression.js)
+ [![David DM](https://img.shields.io/david/tomekwi/gulp-doxme.svg?style=flat-square)](http://david-dm.org/tomekwi/gulp-doxme)
+
+
+
+
 eval-expression
 ===============
 
